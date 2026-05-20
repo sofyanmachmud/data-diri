@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyek | Sofyan Macmud AD</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap');
+        :root { --neon-blue: #00f2ff; --neon-red: #ff0055; --dark-bg: #0a0a0f; }
+        body { font-family: 'Rajdhani', sans-serif; background-color: var(--dark-bg); color: #e0e0e0; min-height: 100vh; display: flex; flex-direction: column;}
+        h1, h2, h3, h4, .font-orbitron { font-family: 'Orbitron', sans-serif; }
+        .glass-cyber { background: rgba(15, 15, 25, 0.9); backdrop-filter: blur(15px); border: 1px solid rgba(0, 242, 255, 0.1); }
+        main { flex: 1; padding-top: 120px; padding-bottom: 80px; }
+        
+        .section-header { margin-bottom: 60px; position: relative; }
+        .section-header h2 { font-size: 2.5rem; letter-spacing: 0.2em; text-transform: uppercase; }
+        .section-header::after { content: ''; position: absolute; bottom: -15px; left: 0; width: 60px; height: 4px; background: var(--neon-red); }
+        
+        .cyber-card { background: rgba(20, 20, 30, 0.8); border: 1px solid rgba(255, 255, 255, 0.05); transition: all 0.4s; height: 100%; }
+        .cyber-card:hover { border-color: var(--neon-blue); transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0, 242, 255, 0.1); }
+        .grid-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(0, 242, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 242, 255, 0.03) 1px, transparent 1px); background-size: 50px 50px; pointer-events: none; z-index: -1; }
+    </style>
+</head>
+<body>
+    <div class="grid-overlay"></div>
+
+    <!-- NAVIGASI -->
+    <nav class="fixed top-0 w-full z-50 glass-cyber border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <span class="text-blue-400 font-bold font-orbitron text-xl tracking-tighter">SM<span class="text-red-500">.</span>AD</span>
+            </div>
+            <div class="hidden md:flex space-x-10">
+                <a href="about.html" class="text-xs uppercase tracking-[0.3em] hover:text-cyan-400 transition font-bold">About</a>
+                <a href="cv.html" class="text-xs uppercase tracking-[0.3em] hover:text-cyan-400 transition font-bold">CV</a>
+                <a href="projects.html" class="text-xs uppercase tracking-[0.3em] text-cyan-400 font-bold">Projects</a>
+                <a href="awards.html" class="text-xs uppercase tracking-[0.3em] hover:text-cyan-400 transition font-bold">Awards</a>
+                <a href="reflection.html" class="text-xs uppercase tracking-[0.3em] hover:text-cyan-400 transition font-bold">Reflection</a>
+                <a href="contact.html" class="text-xs uppercase tracking-[0.3em] hover:text-cyan-400 transition font-bold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="max-w-6xl mx-auto px-4 w-full">
+            <div class="section-header">
+                <h2 class="text-white">Selected <span class="text-red-500">Projects</span></h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 mt-12">
+                <!-- Project Item -->
+                <div class="cyber-card group overflow-hidden">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=500" alt="[Citra Proyek Sistem]" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 grayscale group-hover:grayscale-0">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="font-bold text-white text-lg mb-3 group-hover:text-cyan-400 transition">Menyambung Router dan swicth hub</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-6">Menganalisis suatu jaringan.</p>
+                        <div class="flex gap-2">
+                            <span class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 border border-blue-500/20">REACT</span>
+                            <span class="text-[10px] bg-red-500/10 text-red-400 px-2 py-1 border border-red-500/20">D3.JS</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Item 2 -->
+                <div class="cyber-card group overflow-hidden">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&w=500" alt="[Citra Proyek Desain]" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 grayscale group-hover:grayscale-0">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="font-bold text-white text-lg mb-3 group-hover:text-cyan-400 transition">Coding C++</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-6">Berfikir Logika.</p>
+                        <div class="flex gap-2">
+                            <span class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 border border-blue-500/20">FIGMA</span>
+                            <span class="text-[10px] bg-red-500/10 text-red-400 px-2 py-1 border border-red-500/20">UI/UX</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Item 3 -->
+                <div class="cyber-card group overflow-hidden">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=500" alt="[Citra Proyek IoT]" class="w-full h-full object-cover group-hover:scale-110 transition duration-700 grayscale group-hover:grayscale-0">
+                    </div>
+                    <div class="p-8">
+                        <h4 class="font-bold text-white text-lg mb-3 group-hover:text-cyan-400 transition">Mempelajari Exel</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-6">Supaya bisa mengerjakan akutansi lewat digital.</p>
+                        <div class="flex gap-2">
+                            <span class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 border border-blue-500/20">IOT</span>
+                            <span class="text-[10px] bg-red-500/10 text-red-400 px-2 py-1 border border-red-500/20">NODEJS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-6 text-center border-t border-white/5 bg-black mt-auto">
+        <div class="max-w-6xl mx-auto px-8 flex justify-center">
+            <p class="text-[10px] text-gray-600 font-mono tracking-[0.3em] uppercase">COPYRIGHT © 2024 SOFYAN MACMUD AD</p>
+        </div>
+    </footer>
+</body>
+</html>
